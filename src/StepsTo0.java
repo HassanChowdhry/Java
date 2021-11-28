@@ -20,5 +20,15 @@ public class StepsTo0 {
         return steps;
     }
 
+    public int numberOfStepsRecursive(int num)
+    {
+        if (num == 0)
+            return 0;
+        else if (num % 2 == 0)
+            return 1 + numberOfStepsRecursive((num / 2));
+        else
+            return 1 + numberOfStepsRecursive(--num);
+    }
+
 }
 
